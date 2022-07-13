@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Flash</string>
+    <string name="enter_email">Enter Email :</string>
+    <string name="enter_password">Enter Password :</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter_username">Enter Username :</string>
+    <string name="enter_mobileNo">Enter Mobile Number :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

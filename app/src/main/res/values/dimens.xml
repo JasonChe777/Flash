@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_icon">400dp</dimen>
+    <dimen name="_220dp">220dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+</resources>

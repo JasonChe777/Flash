@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="20dp"
+    tools:context=".UserLogin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/login_icon"
+        android:layout_height="@dimen/_220dp"
+        android:layout_margin="@dimen/_10dp"
+        android:src="@drawable/logoicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_username"
+        android:textColor="@color/login_text_color"
+        android:textColorHint="@color/login_text_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintBottom_toTopOf="@id/edtEmail" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_email"
+        android:textColor="@color/login_text_color"
+        android:textColorHint="@color/login_text_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edtUserName"
+        app:layout_constraintBottom_toTopOf="@id/edtMobileNo" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtMobileNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_mobileNo"
+        android:textColor="@color/login_text_color"
+        android:textColorHint="@color/login_text_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintBottom_toTopOf="@id/edtPassword" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_password"
+        android:textColor="@color/login_text_color"
+        android:textColorHint="@color/login_text_color"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/edtMobileNo"
+        />
+
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/register"
+        android:textColor="@color/login_btn_text_color"
+        style="@style/btnStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
