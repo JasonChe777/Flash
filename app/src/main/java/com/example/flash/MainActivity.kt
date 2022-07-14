@@ -4,30 +4,22 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import com.example.flash.databinding.ActivityMainBinding
-import com.example.flash.model.remote.data.CategoryResponse
-import com.example.flash.model.remote.volleyhandler.CategoryVolleyHandler
-import com.example.flash.presenter.category.CategoryMVP
-import com.example.flash.presenter.category.CategoryPresenter
 import com.example.flash.view.HomeFragment
 
-class MainActivity : AppCompatActivity(),CategoryMVP.CategoryView {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var categoryPresenter: CategoryMVP.CategoryPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        categoryPresenter = CategoryPresenter(CategoryVolleyHandler(this), this)
-        categoryPresenter.getCategory()
 
         supportFragmentManager.beginTransaction().add(R.id.fragment_container,HomeFragment() ).commit()
         initView()
@@ -83,19 +75,6 @@ class MainActivity : AppCompatActivity(),CategoryMVP.CategoryView {
         } else {
             super.onBackPressed()
         }
-    }
-
-    override fun setResult(categoryResponse: CategoryResponse) {
-        Toast.makeText(this,categoryResponse.message,Toast.LENGTH_LONG).show()
-        Log.d("hi","result ${categoryResponse.message}")
-    }
-
-    override fun onLoad(shouldLoad: Boolean) {
-        Toast.makeText(this,"load is $shouldLoad",Toast.LENGTH_LONG).show()
-    }
-
-    override fun setErrorMessage(message: String?) {
-        Toast.makeText(this,message,Toast.LENGTH_LONG).show()
     }
 
 }

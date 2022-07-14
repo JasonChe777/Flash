@@ -5,9 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.flash.R
 import com.example.flash.databinding.FragmentHomeBinding
 import com.example.flash.model.remote.data.CategoryResponse
 import com.example.flash.model.remote.volleyhandler.CategoryVolleyHandler
