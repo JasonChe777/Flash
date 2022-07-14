@@ -1,8 +1,8 @@
-package com.example.flash.presenter
+package com.example.flash.presenter.login
 
 import com.example.flash.model.remote.OperationalCallBack
-import com.example.flash.model.remote.User
-import com.example.flash.model.remote.UserVolleyHandler
+import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
 
 class LoginPresenter(
     private val volleyHandler: UserVolleyHandler,
@@ -19,7 +19,7 @@ class LoginPresenter(
                     loginView.setLogin(user)
                 }
 
-                override fun onFailure(message: String) {
+                override fun onFailure(message: String?) {
                     loginView.onLoad(false)
                     loginView.setResult(message)
                 }

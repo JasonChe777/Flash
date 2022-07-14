@@ -5,28 +5,24 @@
         <item
             android:id="@+id/home"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Home"
-            app:showAsAction="always" />
+            android:iconTint="@color/login_btn_color"
+            android:title="Home" />
         <item
             android:id="@+id/cart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
-            android:title="Cart"
-            app:showAsAction="always" />
+            android:title="Cart" />
         <item
             android:id="@+id/order"
             android:icon="@drawable/ic_baseline_checklist_24"
-            android:title="Orders"
-            app:showAsAction="always" />
+            android:title="Orders" />
         <item
             android:id="@+id/profile"
             android:icon="@drawable/ic_baseline_person_24"
-            android:title="Profile"
-            app:showAsAction="always" />
+            android:title="Profile" />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_baseline_logout_24"
-            android:title="Logout"
-            app:showAsAction="always" />
-
+            android:title="Logout" />
     </group>
+
 </menu>

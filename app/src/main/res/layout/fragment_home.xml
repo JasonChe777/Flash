@@ -12,8 +12,5 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
         tools:itemCount="8"
-        tools:layout_editor_absoluteX="-16dp"
-
-        tools:layout_editor_absoluteY="-161dp"
-        tools:listitem="@layout/home_item" />
+        tools:listitem="@layout/view_category_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.flash.model.remote
+package com.example.flash.model.remote.volleyhandler
 
 import android.content.Context
 import android.util.Log
@@ -10,6 +10,8 @@ import com.android.volley.toolbox.Volley
 import com.example.flash.model.remote.Constants.BASE_URL
 import com.example.flash.model.remote.Constants.LOGIN_END_POINT
 import com.example.flash.model.remote.Constants.REGISTRATION_END_POINT
+import com.example.flash.model.remote.OperationalCallBack
+import com.example.flash.model.remote.data.User
 import org.json.JSONObject
 
 class UserVolleyHandler(private val context: Context) {

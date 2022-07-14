@@ -1,4 +1,4 @@
-package com.example.flash.model.remote
+package com.example.flash.model.remote.data
 
 data class User(
     var userID: String?,

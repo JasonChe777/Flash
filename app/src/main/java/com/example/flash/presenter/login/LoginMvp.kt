@@ -1,6 +1,6 @@
-package com.example.flash.presenter
+package com.example.flash.presenter.login
 
-import com.example.flash.model.remote.User
+import com.example.flash.model.remote.data.User
 
 interface LoginMVP {
     interface LoginPresenter {
@@ -8,7 +8,7 @@ interface LoginMVP {
     }
 
     interface LoginView {
-        fun setResult(message: String)
+        fun setResult(message: String?)
         fun onLoad(isLoading: Boolean)
         fun setLogin(user: User)
     }

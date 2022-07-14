@@ -3,15 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.156" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2355" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_home_item_border.xml" value="0.1335" />
-        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_user_login.xml" value="0.4157608695652174" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_user_registration.xml" value="0.4157608695652174" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_1.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_2.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_3.xml" value="0.3351449275362319" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_home.xml" value="0.234375" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_homescreen.xml" value="0.33" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/home_item.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/nav_view_header.xml" value="0.25" />

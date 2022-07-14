@@ -4,12 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.flash.databinding.ActivityUserRegistrationBinding
-import com.example.flash.model.remote.User
-import com.example.flash.model.remote.UserVolleyHandler
-import com.example.flash.presenter.RegistrationMVP
-import com.example.flash.presenter.RegistrationPresenter
+import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
+import com.example.flash.presenter.registration.RegistrationMVP
+import com.example.flash.presenter.registration.RegistrationPresenter
 
 class UserRegistration : AppCompatActivity(), RegistrationMVP.RegistrationView {
 
@@ -37,7 +36,7 @@ class UserRegistration : AppCompatActivity(), RegistrationMVP.RegistrationView {
         }
     }
 
-        override fun setResult(message: String) {
+        override fun setResult(message: String?) {
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
 

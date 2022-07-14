@@ -5,18 +5,16 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKeys
 import com.example.flash.databinding.ActivityUserLoginBinding
-import com.example.flash.model.remote.User
-import com.example.flash.model.remote.UserVolleyHandler
-import com.example.flash.presenter.LoginMVP
-import com.example.flash.presenter.LoginPresenter
+import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
+import com.example.flash.presenter.login.LoginMVP
+import com.example.flash.presenter.login.LoginPresenter
 
-class UserLogin : AppCompatActivity(),LoginMVP.LoginView {
+class UserLogin : AppCompatActivity(), LoginMVP.LoginView {
 
     private lateinit var binding: ActivityUserLoginBinding
-    private lateinit var encryptedSharedPreferences: SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     private lateinit var presenter: LoginPresenter
 
@@ -25,23 +23,8 @@ class UserLogin : AppCompatActivity(),LoginMVP.LoginView {
         binding = ActivityUserLoginBinding.inflate(layoutInflater)
         presenter = LoginPresenter(UserVolleyHandler(this), this)
         setContentView(binding.root)
-        initEncryptedSharePref()
         initView()
-//        checkUserLoginStatus()
-    }
 
-    private fun initEncryptedSharePref() {
-        val keyGenParameterSpec = MasterKeys.AES256_GCM_SPEC
-        val mainKeyAlias = MasterKeys.getOrCreate(keyGenParameterSpec)
-
-        encryptedSharedPreferences = EncryptedSharedPreferences.create(
-            FILE_NAME,
-            mainKeyAlias,
-            this,
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
-        )
-        editor = encryptedSharedPreferences.edit()
     }
 
     private fun initView() {
@@ -60,19 +43,9 @@ class UserLogin : AppCompatActivity(),LoginMVP.LoginView {
         }
     }
 
-//    private fun checkUserLoginStatus() {
-//        if (encryptedSharedPreferences.contains(EMAIL)) {
-//            intentToHomeScreen()
-//        }
-//    }
-//
-//
-//    private fun intentToHomeScreen() {
-//        startActivity(Intent(this@UserLogin, MainActivity::class.java))
-//    }
 
 
-    override fun setResult(message: String) {
+    override fun setResult(message: String?) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
@@ -81,16 +54,14 @@ class UserLogin : AppCompatActivity(),LoginMVP.LoginView {
     }
 
     override fun setLogin(user: User) {
-        val intent: Intent = Intent(this, MainActivity::class.java)
-        encryptedSharedPreferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE)
-        editor = encryptedSharedPreferences.edit()
+        sharedPreferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE)
+        editor = sharedPreferences.edit()
         editor.putString(USER_ID, user.userID)
         editor.putString(EMAIL, user.emailId)
         editor.putString(PHONE, user.mobileNo)
         editor.putString(NAME, user.fullName)
-        editor.putString(PASSWORD, user.password)
         editor.apply()
-        startActivity(intent)
+        startActivity(Intent(this@UserLogin, MainActivity::class.java))
     }
 
     companion object {
@@ -99,6 +70,5 @@ class UserLogin : AppCompatActivity(),LoginMVP.LoginView {
         const val EMAIL = "email"
         const val PHONE = "phone"
         const val NAME = "name"
-        const val PASSWORD = "password"
     }
 }

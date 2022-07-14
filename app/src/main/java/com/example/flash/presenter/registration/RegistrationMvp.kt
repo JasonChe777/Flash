@@ -1,6 +1,6 @@
-package com.example.flash.presenter
+package com.example.flash.presenter.registration
 
-import com.example.flash.model.remote.User
+import com.example.flash.model.remote.data.User
 
 interface RegistrationMVP {
 
@@ -9,7 +9,7 @@ interface RegistrationMVP {
     }
 
     interface RegistrationView {
-        fun setResult(message: String)
+        fun setResult(message: String?)
         fun onLoad(isLoading: Boolean)
         fun setLogin(user: User)
     }
