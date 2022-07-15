@@ -1,6 +1,6 @@
 package com.example.flash.presenter.login
 
-import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.data.user.User
 
 interface LoginMVP {
     interface LoginPresenter {

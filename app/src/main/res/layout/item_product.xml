@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="@dimen/_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageProduct"
+            android:src="@drawable/phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="@dimen/_120dp"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            tools:text="RealMe Narzo 50"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageProduct"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            android:isIndicator = "true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:max="5"
+            style="?android:attr/ratingBarStyleSmall"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductDescription"
+            android:layout_marginTop="@dimen/_5dp"
+            app:layout_constraintStart_toEndOf="@id/imageProduct"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName"
+            tools:text="5G, OS: Android 10, RAM: 16 GB, Internal Storage: 256 GB, Primary Camera: 64 MP, Secondary Camera: 13 MP"
+            android:maxLines="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductPrice"
+            tools:text="$ 200"
+            android:layout_marginTop="@dimen/_5dp"
+            app:layout_constraintTop_toBottomOf="@id/tvProductDescription"
+            app:layout_constraintStart_toEndOf="@id/imageProduct"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddToCart"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/blue"
+            android:layout_marginTop="@dimen/_5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProductDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

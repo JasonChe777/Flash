@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.flash.databinding.ActivityUserLoginBinding
-import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.data.user.User
 import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
 import com.example.flash.presenter.login.LoginMVP
 import com.example.flash.presenter.login.LoginPresenter

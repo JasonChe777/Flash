@@ -1,7 +1,7 @@
 package com.example.flash.presenter.category
 
 import com.example.flash.model.remote.OperationalCallBack
-import com.example.flash.model.remote.data.CategoryResponse
+import com.example.flash.model.remote.data.category.CategoryResponse
 import com.example.flash.model.remote.volleyhandler.CategoryVolleyHandler
 
 class CategoryPresenter(

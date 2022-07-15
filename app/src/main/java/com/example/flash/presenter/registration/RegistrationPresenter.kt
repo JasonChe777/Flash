@@ -1,7 +1,7 @@
 package com.example.flash.presenter.registration
 
 import com.example.flash.model.remote.OperationalCallBack
-import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.data.user.User
 import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
 
 class RegistrationPresenter(

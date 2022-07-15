@@ -1,4 +1,4 @@
-package com.example.flash.model.remote.data
+package com.example.flash.model.remote.data.category
 
 data class Category(
     val category_id: String,

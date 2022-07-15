@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.flash.databinding.ViewCategoryItemBinding
-import com.example.flash.model.remote.data.Category
+import com.example.flash.model.remote.data.category.Category
 import com.example.flash.model.remote.Constants.BASE_IMAGE_URL
 
 class CategoryListAdapter(private val categoryList: List<Category>) :
@@ -34,7 +34,7 @@ class CategoryListAdapter(private val categoryList: List<Category>) :
         return categoryList.size
     }
 
-    inner class CategoryViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+    inner class CategoryViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         val image = binding.categoryImage
         val title = binding.categoryTitle
     }

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.flash.databinding.ActivityUserRegistrationBinding
-import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.data.user.User
 import com.example.flash.model.remote.volleyhandler.UserVolleyHandler
 import com.example.flash.presenter.registration.RegistrationMVP
 import com.example.flash.presenter.registration.RegistrationPresenter

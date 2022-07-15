@@ -11,7 +11,7 @@ import com.example.flash.model.remote.Constants.BASE_URL
 import com.example.flash.model.remote.Constants.LOGIN_END_POINT
 import com.example.flash.model.remote.Constants.REGISTRATION_END_POINT
 import com.example.flash.model.remote.OperationalCallBack
-import com.example.flash.model.remote.data.User
+import com.example.flash.model.remote.data.user.User
 import org.json.JSONObject
 
 class UserVolleyHandler(private val context: Context) {

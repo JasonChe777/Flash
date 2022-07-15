@@ -1,6 +1,6 @@
 package com.example.flash.presenter.category
 
-import com.example.flash.model.remote.data.CategoryResponse
+import com.example.flash.model.remote.data.category.CategoryResponse
 
 interface CategoryMVP {
     interface CategoryPresenter{

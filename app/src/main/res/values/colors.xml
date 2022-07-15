@@ -11,4 +11,6 @@
     <color name="login_text_color">#FFD600</color>
     <color name="login_btn_color">#FFD600</color>
     <color name="login_btn_text_color">#D50000</color>
+    <color name="orange">#FFAB00</color>
+    <color name="blue">#2962FF</color>
 </resources>

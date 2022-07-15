@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.flash.databinding.FragmentHomeBinding
-import com.example.flash.model.remote.data.CategoryResponse
+import com.example.flash.model.remote.data.category.CategoryResponse
 import com.example.flash.model.remote.volleyhandler.CategoryVolleyHandler
 import com.example.flash.presenter.category.CategoryMVP
 import com.example.flash.presenter.category.CategoryPresenter
