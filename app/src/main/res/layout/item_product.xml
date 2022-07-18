@@ -22,7 +22,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductName"
             tools:text="RealMe Narzo 50"
-            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textColor="@color/login_text_color"
             android:textSize="@dimen/_15sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageProduct"
@@ -56,11 +57,12 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvProductPrice"
-            tools:text="$ 200"
+            tools:text="$ 700"
             android:layout_marginTop="@dimen/_5dp"
             app:layout_constraintTop_toBottomOf="@id/tvProductDescription"
             app:layout_constraintStart_toEndOf="@id/imageProduct"
-            android:textColor="@color/orange"
+            android:textColor="@color/login_text_color"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

@@ -18,7 +18,7 @@ import com.example.flash.presenter.subcategory.SubcategoryPresenter
 class SubcategoryFragment : Fragment(), SubcategoryMVP.SubCategoryView {
     private lateinit var binding: FragmentSubCategoryBinding
     private lateinit var subCategoryId: String
-    private lateinit var presenter: SubcategoryMVP.SubCategoryPresenter
+    private lateinit var presenter: SubcategoryPresenter
     private lateinit var product: ArrayList<Product>
     private lateinit var adapter: ProductAdapter
 

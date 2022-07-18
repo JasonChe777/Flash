@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/decrement"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:textSize="25sp"
+        android:textColor="@color/login_btn_text_color"
+        android:backgroundTint="@color/login_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="—"/>
+
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="50dp"
+        android:background="@color/login_text_color"
+        android:layout_height="28dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:focusable="false"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@id/decrement"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="number"
+        android:gravity="center"
+        android:imeOptions="actionDone" />
+    <Button
+        android:id="@+id/increment"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/display"
+        android:textColor="@color/login_btn_text_color"
+        android:backgroundTint="@color/login_text_color"
+        android:text="+"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

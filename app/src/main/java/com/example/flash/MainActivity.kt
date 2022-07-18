@@ -36,8 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener{ menuItem->
             when(menuItem.itemId){
                 R.id.logout->{
-                    val intent: Intent = Intent(this@MainActivity, UserLogin::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this@MainActivity,UserLogin::class.java))
                 }
                 R.id.cart -> Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show()
                 R.id.order -> Toast.makeText(this, "Orders", Toast.LENGTH_SHORT).show()

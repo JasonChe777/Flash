@@ -8,7 +8,7 @@ object Constants {
     const val CATEGORY_END_POINT = "Category"
     const val SUB_CATEGORY_END_POINT = "SubCategory?"
     const val CATEGORY_ID = "category_id"
-    const val SUB_CATEGORY_ID ="subcategory_id"
+    const val SUB_CATEGORY_ID = "subcategory_id"
     const val PRODUCT_ID = "product_id"
     const val PRODUCTS_END_POINT = "SubCategory/products/"
     const val PRODUCT_DETAIL_END_POINT = "Product/details/"

@@ -9,7 +9,7 @@ class CategoryPresenter(
     val categoryView: CategoryMVP.CategoryView
 ) : CategoryMVP.CategoryPresenter {
     override fun getCategory() {
-        categoryVolleyHandler.getCategory(object :OperationalCallBack{
+        categoryVolleyHandler.getCategory(object : OperationalCallBack {
             override fun onSuccess(data: Any) {
                 categoryView.setResult(data as CategoryResponse)
                 categoryView.onLoad(false)

@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.flash.databinding.FragmentHomeBinding
+import com.example.flash.model.remote.data.category.Category
 import com.example.flash.model.remote.data.category.CategoryResponse
 import com.example.flash.model.remote.volleyhandler.CategoryVolleyHandler
 import com.example.flash.presenter.category.CategoryMVP
@@ -15,8 +17,9 @@ import com.example.flash.presenter.category.CategoryPresenter
 class HomeFragment : Fragment(), CategoryMVP.CategoryView {
 
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var presenter: CategoryMVP.CategoryPresenter
+    private lateinit var presenter: CategoryPresenter
     private lateinit var categoryAdapter: CategoryListAdapter
+    private lateinit var category: ArrayList<Category>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,8 +44,10 @@ class HomeFragment : Fragment(), CategoryMVP.CategoryView {
 
 
     override fun setResult(categoryResponse: CategoryResponse) {
-        categoryAdapter = CategoryListAdapter(categoryResponse.categories)
+        category = categoryResponse.categories as ArrayList<Category>
+        categoryAdapter = CategoryListAdapter(category)
         binding.rvHomeScreen.adapter = categoryAdapter
+        binding.rvHomeScreen.layoutManager = GridLayoutManager(context, 2)
     }
 
 

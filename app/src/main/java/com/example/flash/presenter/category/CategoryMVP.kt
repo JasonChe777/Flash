@@ -9,7 +9,7 @@ interface CategoryMVP {
 
     interface CategoryView{
         fun setResult(categoryResponse: CategoryResponse)
-        fun onLoad(shouldLoad: Boolean)
+        fun onLoad(onLoad: Boolean)
         fun setErrorMessage(message:String?)
     }
 }
