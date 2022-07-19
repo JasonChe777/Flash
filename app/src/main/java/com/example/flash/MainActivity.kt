@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.logout->{
                     startActivity(Intent(this@MainActivity,UserLogin::class.java))
                 }
-                R.id.cart -> Toast.makeText(this, "Cart", Toast.LENGTH_SHORT).show()
+                R.id.cart -> startActivity(Intent(this@MainActivity,CartActivity::class.java))
                 R.id.order -> Toast.makeText(this, "Orders", Toast.LENGTH_SHORT).show()
                 R.id.profile -> Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
                 R.id.home -> Toast.makeText(this, "home", Toast.LENGTH_SHORT).show()

@@ -15,6 +15,8 @@ class DBHelper(private val context: Context) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-
+        if (oldVersion == 2 && newVersion ==3){
+            db?.execSQL(CREATE_CART_TABLE)
+        }
     }
 }

@@ -9,6 +9,7 @@
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2355" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_circleindicator.xml" value="0.2905" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_home_item_border.xml" value="0.1335" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_cart.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_product.xml" value="0.44114583333333335" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_homescreen.xml" value="0.33" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_sub_category.xml" value="0.3515625" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/home_item.xml" value="0.3351449275362319" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/item_cart_product.xml" value="0.310546875" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/item_category.xml" value="0.4401041666666667" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/item_product.xml" value="0.4401041666666667" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/item_product_image.xml" value="0.43645833333333334" />

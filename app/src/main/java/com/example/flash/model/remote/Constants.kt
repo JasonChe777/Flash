@@ -17,4 +17,6 @@ object Constants {
     const val PLACE_ORDER_END_POINT = "Order"
     const val GET_ORDERS_END_POINT = "Order/userOrders/"
     const val GET_ORDER_DETAIL_END_POINT = "Order?"
+
+    const val CART = "cart"
 }

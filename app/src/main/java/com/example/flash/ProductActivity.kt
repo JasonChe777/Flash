@@ -1,22 +1,19 @@
 package com.example.flash
 
-import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.ViewGroup
 import android.widget.TableRow
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flash.databinding.ActivityProductBinding
+import com.example.flash.model.local.CartItem
+import com.example.flash.model.local.CartDao
 import com.example.flash.model.remote.Constants.PRODUCT_ID
 import com.example.flash.model.remote.data.product.Image
 import com.example.flash.model.remote.data.product.ProductResponse
 import com.example.flash.model.remote.data.product.Review
 import com.example.flash.model.remote.data.product.Specification
-import com.example.flash.model.remote.data.subcategory.Product
 import com.example.flash.model.remote.volleyhandler.ProductVolleyHandler
 import com.example.flash.presenter.product.ProductMVP
 import com.example.flash.presenter.product.ProductPresenter
@@ -26,6 +23,7 @@ import com.example.flash.view.ReviewAdapter
 class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
     private lateinit var binding: ActivityProductBinding
     private lateinit var presenter: ProductPresenter
+    private lateinit var cartDao: CartDao
     private lateinit var product: com.example.flash.model.remote.data.product.Product
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,19 +33,18 @@ class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
 
         val productId = intent.extras?.get(PRODUCT_ID).toString()
         presenter = ProductPresenter(ProductVolleyHandler(this), this)
-
+        cartDao = CartDao(this)
         getProduct(productId)
     }
-
 
 
     private fun getProduct(productId: String) {
         presenter.getProduct(productId)
     }
 
-    override fun setResult(data:Any) {
-            product = (data as ProductResponse).product
-            setUpViews(product)
+    override fun setResult(data: Any) {
+        product = (data as ProductResponse).product
+        setUpViews(product)
 
     }
 
@@ -62,6 +59,19 @@ class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
             setUpImageViewPager(product.images as ArrayList<Image>)
             setUpReviewRecyclerView(product.reviews as ArrayList<Review>)
             setUpSpecification(product.specifications as ArrayList<Specification>)
+
+            btnAddToCart.setOnClickListener {
+                val cartItem = CartItem(
+                    cartId = null,
+                    productName = product.product_name,
+                    productId = product.product_id,
+                    description = product.description,
+                    price = product.price.toDouble(),
+                    count = numberPicker.value
+                )
+                cartDao.addCartItem(cartItem)
+            }
+
         }
     }
 
@@ -72,7 +82,7 @@ class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
             val detail = TextView(applicationContext)
 
             val layoutParams = TableRow.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
-            layoutParams.setMargins(0,0,0,15)
+            layoutParams.setMargins(0, 0, 0, 15)
 
             title.layoutParams = layoutParams
             detail.layoutParams = layoutParams
@@ -103,7 +113,7 @@ class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
     }
 
     override fun onLoad(isLoading: Boolean) {
-        Log.i("tag", isLoading.toString())
+
     }
 
     override fun setErrorMessage(message: String?) {
