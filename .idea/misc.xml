@@ -7,8 +7,10 @@
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/boundary.xml" value="0.28" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.156" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.2355" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.155" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_circleindicator.xml" value="0.2905" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_home_item_border.xml" value="0.1335" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/drawable/shape_input_field.xml" value="0.155" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_cart.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/activity_product.xml" value="0.44114583333333335" />
@@ -21,6 +23,7 @@
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_3.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_home.xml" value="0.234375" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_homescreen.xml" value="0.33" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_search_product.xml" value="0.3212962962962963" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/fragment_sub_category.xml" value="0.3515625" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/home_item.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/item_cart_product.xml" value="0.310546875" />
@@ -35,6 +38,7 @@
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/layout/view_pager_item.xml" value="0.3351449275362319" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/menu/homescreen_menu.xml" value="0.22870370370370371" />
         <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/menu/menu_drawer_nav.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/che69/AndroidStudioProjects/Flash/app/src/main/res/menu/option_menu.xml" value="0.4822916666666667" />
       </map>
     </option>
   </component>

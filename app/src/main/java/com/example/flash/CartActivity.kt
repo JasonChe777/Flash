@@ -10,17 +10,20 @@ import com.example.flash.model.local.CartItem
 class CartActivity : AppCompatActivity() {
     lateinit var binding :ActivityCartBinding
     lateinit var cartDao:CartDao
-    lateinit var cartItemList:List<CartItem>
+    lateinit var cartItemList:ArrayList<CartItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCartBinding.inflate(layoutInflater)
         setContentView(binding.root)
         cartDao = CartDao(this)
+
         setUpCartListView()
+
     }
 
-   private fun setUpCartListView(){
+
+    private fun setUpCartListView(){
         cartItemList = cartDao.getAllCartItem()
         binding.rvCartScreen.adapter = CartAdapter(cartItemList)
 

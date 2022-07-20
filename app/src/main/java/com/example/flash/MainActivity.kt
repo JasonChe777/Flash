@@ -4,12 +4,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import com.example.flash.databinding.ActivityMainBinding
 import com.example.flash.view.HomeFragment
+import com.example.flash.view.SearchProductFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initView() {
-        //setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24)
 
@@ -56,6 +57,11 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.search){
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,SearchProductFragment()).commit()
+        }
+
+
         if (item.itemId == android.R.id.home) {
 
             if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -75,5 +81,11 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.option_menu, menu)
+        return true
+    }
+
 
 }

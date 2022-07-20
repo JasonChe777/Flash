@@ -1,10 +1,12 @@
 package com.example.flash
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.TableRow
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flash.databinding.ActivityProductBinding
 import com.example.flash.model.local.CartItem
@@ -70,9 +72,28 @@ class ProductActivity : AppCompatActivity(), ProductMVP.ProductView {
                     count = numberPicker.value
                 )
                 cartDao.addCartItem(cartItem)
+                setUpDialogBox()
             }
 
         }
+    }
+
+    private fun setUpDialogBox() {
+        val builder = AlertDialog.Builder(this)
+            .setTitle("Success!")
+            .setMessage("Item has been added to cart!")
+            .setNeutralButton("Continue Shopping", null)
+            .setPositiveButton("View Cart") { _, _ ->
+                startActivity(
+                    Intent(
+                        this@ProductActivity,
+                        CartActivity::class.java
+                    )
+                )
+            }
+        val alertDialog = builder.create()
+        alertDialog.setCancelable(false)
+        alertDialog.show()
     }
 
     private fun setUpSpecification(specifications: ArrayList<Specification>) {

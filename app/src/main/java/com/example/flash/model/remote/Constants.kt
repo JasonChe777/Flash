@@ -11,6 +11,7 @@ object Constants {
     const val SUB_CATEGORY_ID = "subcategory_id"
     const val PRODUCT_ID = "product_id"
     const val PRODUCTS_END_POINT = "SubCategory/products/"
+    const val SEARCH_PRODUCTS_END_POINT = "Product/search?query="
     const val PRODUCT_DETAIL_END_POINT = "Product/details/"
     const val ADD_ADDRESS_END_POINT = "User/address"
     const val GET_ADDRESS_END_POINT = "User/addresses/"

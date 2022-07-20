@@ -13,4 +13,5 @@
     <color name="login_btn_text_color">#D50000</color>
     <color name="orange">#FFAB00</color>
     <color name="blue">#2962FF</color>
+    <color name="transparent">#00000000</color>
 </resources>

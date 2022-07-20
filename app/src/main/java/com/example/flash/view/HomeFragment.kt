@@ -22,11 +22,6 @@ class HomeFragment : Fragment(), CategoryMVP.CategoryView {
     private lateinit var category: ArrayList<Category>
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,7 +46,7 @@ class HomeFragment : Fragment(), CategoryMVP.CategoryView {
     }
 
 
-    override fun onLoad(shouldLoad: Boolean) {
+    override fun onLoad(onLoad: Boolean) {
 
     }
 
