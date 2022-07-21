@@ -1,5 +1,6 @@
 package com.example.flash.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ class ProductAdapter(private val productList: ArrayList<Product>) :
     private lateinit var binding: ItemProductBinding
 
     inner class ProductViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        @SuppressLint("SetTextI18n")
         fun bind(product: Product) {
             binding.apply {
                 Glide.with(view.context)

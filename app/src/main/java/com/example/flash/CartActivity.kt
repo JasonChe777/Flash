@@ -1,15 +1,12 @@
 package com.example.flash
 
 import android.annotation.SuppressLint
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import com.example.flash.databinding.ActivityCartBinding
 import com.example.flash.model.local.CartDao
 import com.example.flash.model.local.CartItem
 import com.example.flash.view.PlaceOrderFragment
-import com.example.flash.view.SearchProductFragment
 
 class CartActivity : AppCompatActivity() {
     lateinit var binding :ActivityCartBinding
