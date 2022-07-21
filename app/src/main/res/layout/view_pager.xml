@@ -7,17 +7,17 @@
     android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btnLogout"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/backgroundColor"
-        android:clickable="true"
-        android:focusable="true"
-        android:padding="10dp"
-        android:src="@drawable/ic_baseline_logout_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <androidx.appcompat.widget.AppCompatImageButton-->
+<!--        android:id="@+id/btnLogout"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@color/backgroundColor"-->
+<!--        android:clickable="true"-->
+<!--        android:focusable="true"-->
+<!--        android:padding="10dp"-->
+<!--        android:src="@drawable/ic_baseline_logout_24"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
