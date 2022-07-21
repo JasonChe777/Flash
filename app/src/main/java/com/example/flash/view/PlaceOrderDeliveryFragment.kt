@@ -91,7 +91,7 @@ class PlaceOrderDeliveryFragment : Fragment(), GetAddressMVP.GetAddressView, Add
             (this.parentFragment as PlaceOrderFragment).nextPager()
         }
 
-        val btnCheckoutDeliveryAddAddress: Button = currentView.findViewById(R.id.btn_checkout_delivery_add_address)
+        val btnCheckoutDeliveryAddAddress: Button = currentView.findViewById(R.id.btn_add_address)
         btnCheckoutDeliveryAddAddress.setOnClickListener {
             showAddBookDialog()
 

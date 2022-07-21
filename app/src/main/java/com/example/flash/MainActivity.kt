@@ -38,11 +38,12 @@ class MainActivity : AppCompatActivity() {
             when(menuItem.itemId){
                 R.id.logout->{
                     startActivity(Intent(this@MainActivity,UserLogin::class.java))
+                    Toast.makeText(this, "Logged out successfully!", Toast.LENGTH_LONG).show()
                 }
                 R.id.cart -> startActivity(Intent(this@MainActivity,CartActivity::class.java))
                 R.id.order -> Toast.makeText(this, "Orders", Toast.LENGTH_SHORT).show()
                 R.id.profile -> Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
-                R.id.home -> Toast.makeText(this, "home", Toast.LENGTH_SHORT).show()
+                R.id.home -> binding.drawerLayout.closeDrawer(GravityCompat.START)
             }
             true
 

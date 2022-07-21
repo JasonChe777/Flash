@@ -8,7 +8,7 @@
     android:padding="@dimen/_15dp">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_checkout_cart_fragment_total_bill_amount"
+        android:id="@+id/tv_checkout_cart_total_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_checkout_cart_fragment_total_amount"
+        android:id="@+id/tv_checkout_cart_total_amount_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10dp"
@@ -38,13 +38,13 @@
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:scrollbars="vertical"
-            app:layout_constraintBottom_toTopOf="@id/btn_checkout_cart_item_next"
-            app:layout_constraintTop_toBottomOf="@id/tv_checkout_cart_fragment_total_amount"
+            app:layout_constraintBottom_toTopOf="@id/btn_checkout_next"
+            app:layout_constraintTop_toBottomOf="@id/tv_checkout_cart_total_amount"
             tools:listitem="@layout/view_cart_sample" />
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_checkout_cart_item_next"
+        android:id="@+id/btn_checkout_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

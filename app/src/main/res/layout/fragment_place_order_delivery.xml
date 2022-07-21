@@ -43,7 +43,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_checkout_delivery_add_address"
+        android:id="@+id/btn_add_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

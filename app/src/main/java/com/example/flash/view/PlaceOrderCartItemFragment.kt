@@ -45,14 +45,14 @@ class PlaceOrderCartItemFragment : Fragment() {
             val cartItem = cartItemList[i]
             totalAmount += cartItem.price * cartItem.count
         }
-        view.findViewById<TextView>(R.id.tv_checkout_cart_fragment_total_amount).text =
+        view.findViewById<TextView>(R.id.tv_checkout_cart_total_amount_num).text =
             "$ $totalAmount"
         adapter = PlaceOrderCartItemAdapter(view.context, cartItemList)
         cartView.findViewById<RecyclerView>(R.id.rv_checkout_cart_item).layoutManager =
             LinearLayoutManager(view.context)
         cartView.findViewById<RecyclerView>(R.id.rv_checkout_cart_item).adapter = adapter
 
-        val btnCheckoutCartItemNext: Button = view.findViewById(R.id.btn_checkout_cart_item_next)
+        val btnCheckoutCartItemNext: Button = view.findViewById(R.id.btn_checkout_next)
         btnCheckoutCartItemNext.setOnClickListener {
             (this.parentFragment as PlaceOrderFragment).nextPager()
         }
