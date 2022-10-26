@@ -1,6 +1,6 @@
 # Flash 
 
-**Flash** is a sample android application to shop using API which is built to demonstrate use of *Modern Android development* tools. It has been built using kotlin with clean architecture principles and MVP as well as Architecture Components. Dedicated to all Android Developers with ❤️.
+**Flash** is a simple android application to shop using API which is built to demonstrate use of *Modern Android development* tools. It has been built using kotlin with clean architecture principles and MVP as well as Architecture Components. Dedicated to all Android Developers with ❤️.
 
 ## About
 The app in itself is a simple shopping app. Clicking the product list item it shows the detail of the product. While this is not an extremely complex app, it isn't a simple Hello World app either, so the hope is that it'll cover regular use cases for a basic application.
